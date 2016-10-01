@@ -1,0 +1,9 @@
+.mouse_out{
+fill: #99ccff;
+stroke: #0066cc;
+}
+
+.mouse_over {
+fill: #ff8a00;
+stroke: #ff0000;
+}
