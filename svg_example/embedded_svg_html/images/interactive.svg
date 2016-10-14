@@ -1,34 +1,9 @@
-<html>
-
-<head>
-    <title>SVG Test | Panama Hitek</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <script src="jquery-3.1.1.min.js"></script>
-</head>
-
-<body>
-    <script type="text/javascript">
-        function mouseOver(evt) {
-            $("#" + evt.target.id).attr("class", "mouse_over");
-        }
-
-        function mouseOut(evt) {
-                $("#" + evt.target.id).attr("class", "mouse_out");
-        }
-
-        function mouseClick(evt) {
-                alert(evt.target.id);
-        }
-    </script>
-
-    <svg version="1.1" x="0px" y="0px" width="250px" height="250px" viewBox="0 0 250 250" enable-background="new 0 0 250 250" xml:space="preserve">
+<?xml version="1.0" encoding="utf-8"?>
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="250px" height="250px" viewBox="0 0 250 250" enable-background="new 0 0 250 250" xml:space="preserve">
             <rect id="rectangulo" onclick="mouseClick(evt)" onmouseover="mouseOver(evt)" onmouseout="mouseOut(evt)" class = "mouse_out" x="100" y="100"  stroke-width="4" stroke-miterlimit="10" width="50" height="50"/>
             <circle id="circulo" onclick="mouseClick(evt)" onmouseover="mouseOver(evt)" onmouseout="mouseOut(evt)" class = "mouse_out"  stroke-miterlimit="10" cx="125" cy="51" r="25"/>
             <polygon id="triangulo" onclick="mouseClick(evt)" onmouseover="mouseOver(evt)" onmouseout="mouseOut(evt)" class = "mouse_out" stroke-width="3" stroke-miterlimit="10" points="33.366,225.722 62.233,175.722
                      91.101,225.722 "/>
             <polygon id="hexagono" onclick="mouseClick(evt)" onmouseover="mouseOver(evt)" onmouseout="mouseOut(evt)" class = "mouse_out" stroke-width="6" stroke-miterlimit="10" points="181.142,220.722 168.642,200.722
                      181.142,180.722 206.142,180.722 218.642,200.722 206.142,220.722 "/>
-        </svg>
-</body>
-
-</html>
+    </svg>
