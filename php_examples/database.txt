@@ -1,0 +1,19 @@
+CREATE TABLE `users_list` (
+  `id` int(11) NOT NULL,
+  `name` varchar(25) NOT NULL,
+  `last_name` varchar(25) NOT NULL,
+  `birthdate` varchar(10) NOT NULL,
+  `gender` varchar(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+INSERT INTO `users_list` (`id`, `name`, `last_name`, `birthdate`, `gender`) VALUES
+(1, 'José', 'Díaz', '18/10/1992', 'M'),
+(2, 'Ana', 'González', '30/04/1990', 'F'),
+(3, 'María', 'Rodríguez', '23/2/1993', 'F'),
+(4, 'Pedro', 'Navarro', '11/11/1994', 'M');
+
+ALTER TABLE `users_list`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `users_list`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
