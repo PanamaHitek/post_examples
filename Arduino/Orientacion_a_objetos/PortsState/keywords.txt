@@ -1,0 +1,28 @@
+PortsState	KEYWORD1
+
+setSensor0	KEYWORD2
+
+setSensor1	KEYWORD2
+
+setSensor2	KEYWORD2
+
+setSensor3	KEYWORD2
+
+setSensor4	KEYWORD2
+
+setSensor5	KEYWORD2
+
+getSensor0	KEYWORD2
+
+getSensor1	KEYWORD2
+
+getSensor2	KEYWORD2
+
+getSensor3	KEYWORD2
+
+getSensor4	KEYWORD2
+
+getSensor5	KEYWORD2
+
+getPortsAverage	KEYWORD2
+

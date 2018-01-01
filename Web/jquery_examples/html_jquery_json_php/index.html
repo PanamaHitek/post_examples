@@ -1,0 +1,22 @@
+
+<html>
+    <head>
+        <title>Panama Hitek | Examples</title>
+        <script src="jquery-3.1.1.min.js"></script>
+    </head>
+    <body onload="init()">
+        <script type="text/javascript">
+            function init()
+            {
+                $.ajax({url: "getdata.php", success: function (result) {
+                        var json_obj = $.parseJSON(result);
+                        for (var i in json_obj)
+                        {
+                            alert(json_obj[i].id + " "+json_obj[i].last_name);
+                        }
+                    }});
+            }
+        </script>
+        <div></div> 
+    </body>
+</html>
