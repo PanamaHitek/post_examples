@@ -1,0 +1,20 @@
+#include <U8x8lib.h> //Se importa la clase para el uso de la pantalla OLED
+#include "SDHT.h" //Se importa la clase para el uso del sensor DHT11
+SDHT dht; //Se crea un objeto de la clase para leer el sensor DHT11
+int dataPin = 3; //Se establece el pin en el que está conectado el sensor DHT11
+U8X8_SSD1306_128X64_NONAME_HW_I2C u8x8(U8X8_PIN_NONE); //Se crea una clase para comunicarse con la pantalla OLED
+void setup(void) {
+  u8x8.begin(); //Se inicializa la pantalla
+  u8x8.setFlipMode(1); //Se rota la pantalla en 180 grados
+  u8x8.setFont(u8x8_font_amstrad_cpc_extended_f); //Se establece tipo y tamaño de fuente para la escritura en la pantalla
+}
+
+void loop(void) {
+  if (dht.read(DHT11, dataPin)) { //Si el sensor DHt11 está disponible...
+    u8x8.setCursor(0, 2); //Se establece el cursor en la segunda fila de la pantalla
+    u8x8.print("T: " + String(double(dht.celsius) * 0.1) + " *C"); //Se imprime temperatura en la pantalla
+    u8x8.setCursor(0, 4); //Se establece el cursor en la cuarta fila de la pantalla 
+    u8x8.print("H: " + String(double(dht.humidity) * 0.1) + " %"); //Se imprime la humedad en la pantalla
+  }
+  delay(2000); //Se espera dos segundos (2000 mili segundos) antes de volver a leer el sensor y reescribir la pantalla 
+}
